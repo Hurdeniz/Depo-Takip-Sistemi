@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB88ADAC-D349-411A-932D-7C2EABE2A683}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BTS</RootNamespace>
+    <AssemblyName>İŞLETME DEPO TAKİP SİSTEMİ</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinder_Safe_37061.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Diagram.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDiagram.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db_btsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_btsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="deneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deneme.Designer.cs">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_aktif_isletme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_aktif_isletme.Designer.cs">
+      <DependentUpon>frm_aktif_isletme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_arac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_arac.Designer.cs">
+      <DependentUpon>frm_arac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depolar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depolar.Designer.cs">
+      <DependentUpon>frm_depolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_bilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_bilgileri.Designer.cs">
+      <DependentUpon>frm_depo_bilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_bosalt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_bosalt.Designer.cs">
+      <DependentUpon>frm_depo_bosalt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_durum_degistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_durum_degistir.Designer.cs">
+      <DependentUpon>frm_depo_durum_degistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_guncelle.Designer.cs">
+      <DependentUpon>frm_depo_guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_helezonlu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_helezonlu.Designer.cs">
+      <DependentUpon>frm_depo_helezonlu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_isletme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_isletme.Designer.cs">
+      <DependentUpon>frm_depo_isletme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_pompali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_pompali.Designer.cs">
+      <DependentUpon>frm_depo_pompali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_pompasiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_pompasiz.Designer.cs">
+      <DependentUpon>frm_depo_pompasiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_depo_resim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_depo_resim.Designer.cs">
+      <DependentUpon>frm_depo_resim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_dolmak_uzere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_dolmak_uzere.Designer.cs">
+      <DependentUpon>frm_dolmak_uzere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_isletmeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_isletmeler.Designer.cs">
+      <DependentUpon>frm_isletmeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_isletme_guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_isletme_guncelle.Designer.cs">
+      <DependentUpon>frm_isletme_guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kapasite_durum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kapasite_durum.Designer.cs">
+      <DependentUpon>frm_kapasite_durum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_km_gir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_km_gir.Designer.cs">
+      <DependentUpon>frm_km_gir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pasif_durum_degistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pasif_durum_degistir.Designer.cs">
+      <DependentUpon>frm_pasif_durum_degistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pasif_isletme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pasif_isletme.Designer.cs">
+      <DependentUpon>frm_pasif_isletme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_personel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_personel.Designer.cs">
+      <DependentUpon>frm_personel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pompa_cesit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pompa_cesit.Designer.cs">
+      <DependentUpon>frm_pompa_cesit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_raporr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_raporr.Designer.cs">
+      <DependentUpon>frm_raporr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_resim_guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_resim_guncelle.Designer.cs">
+      <DependentUpon>frm_resim_guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sevkiyat_liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sevkiyat_liste.Designer.cs">
+      <DependentUpon>frm_sevkiyat_liste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sevkiyat_listele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sevkiyat_listele.Designer.cs">
+      <DependentUpon>frm_sevkiyat_listele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sevkiyat_listesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sevkiyat_listesi.Designer.cs">
+      <DependentUpon>frm_sevkiyat_listesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sevkiyat_olustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sevkiyat_olustur.Designer.cs">
+      <DependentUpon>frm_sevkiyat_olustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yeni_depo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yeni_depo.Designer.cs">
+      <DependentUpon>frm_yeni_depo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yeni_depoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yeni_depoo.Designer.cs">
+      <DependentUpon>frm_yeni_depoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yeni_isletmee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yeni_isletmee.Designer.cs">
+      <DependentUpon>frm_yeni_isletmee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_yeni_sevkiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_yeni_sevkiyat.Designer.cs">
+      <DependentUpon>frm_yeni_sevkiyat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpt_aktif_isletme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_aktif_isletme.Designer.cs">
+      <DependentUpon>rpt_aktif_isletme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_helezonlu_depo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_helezonlu_depo.Designer.cs">
+      <DependentUpon>rpt_helezonlu_depo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_isletmeler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_isletmeler.Designer.cs">
+      <DependentUpon>rpt_isletmeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_isletme_depolar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_isletme_depolar.Designer.cs">
+      <DependentUpon>rpt_isletme_depolar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_pasif_isletme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_pasif_isletme.Designer.cs">
+      <DependentUpon>rpt_pasif_isletme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_pompali_depo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_pompali_depo.Designer.cs">
+      <DependentUpon>rpt_pompali_depo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_pompasiz_depo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_pompasiz_depo.Designer.cs">
+      <DependentUpon>rpt_pompasiz_depo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql_baglanti.cs" />
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="deneme.resx">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_aktif_isletme.resx">
+      <DependentUpon>frm_aktif_isletme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_arac.resx">
+      <DependentUpon>frm_arac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depolar.resx">
+      <DependentUpon>frm_depolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_bilgileri.resx">
+      <DependentUpon>frm_depo_bilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_bosalt.resx">
+      <DependentUpon>frm_depo_bosalt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_durum_degistir.resx">
+      <DependentUpon>frm_depo_durum_degistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_guncelle.resx">
+      <DependentUpon>frm_depo_guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_helezonlu.resx">
+      <DependentUpon>frm_depo_helezonlu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_isletme.resx">
+      <DependentUpon>frm_depo_isletme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_pompali.resx">
+      <DependentUpon>frm_depo_pompali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_pompasiz.resx">
+      <DependentUpon>frm_depo_pompasiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_depo_resim.resx">
+      <DependentUpon>frm_depo_resim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_dolmak_uzere.resx">
+      <DependentUpon>frm_dolmak_uzere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_isletmeler.resx">
+      <DependentUpon>frm_isletmeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_isletme_guncelle.resx">
+      <DependentUpon>frm_isletme_guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kapasite_durum.resx">
+      <DependentUpon>frm_kapasite_durum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_km_gir.resx">
+      <DependentUpon>frm_km_gir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pasif_durum_degistir.resx">
+      <DependentUpon>frm_pasif_durum_degistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pasif_isletme.resx">
+      <DependentUpon>frm_pasif_isletme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_personel.resx">
+      <DependentUpon>frm_personel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pompa_cesit.resx">
+      <DependentUpon>frm_pompa_cesit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_raporr.resx">
+      <DependentUpon>frm_raporr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_resim_guncelle.resx">
+      <DependentUpon>frm_resim_guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sevkiyat_liste.resx">
+      <DependentUpon>frm_sevkiyat_liste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sevkiyat_listele.resx">
+      <DependentUpon>frm_sevkiyat_listele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sevkiyat_listesi.resx">
+      <DependentUpon>frm_sevkiyat_listesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sevkiyat_olustur.resx">
+      <DependentUpon>frm_sevkiyat_olustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yeni_depo.resx">
+      <DependentUpon>frm_yeni_depo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yeni_depoo.resx">
+      <DependentUpon>frm_yeni_depoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yeni_isletmee.resx">
+      <DependentUpon>frm_yeni_isletmee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_yeni_sevkiyat.resx">
+      <DependentUpon>frm_yeni_sevkiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rpt_aktif_isletme.resx">
+      <DependentUpon>rpt_aktif_isletme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_helezonlu_depo.resx">
+      <DependentUpon>rpt_helezonlu_depo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_isletmeler.resx">
+      <DependentUpon>rpt_isletmeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_isletme_depolar.resx">
+      <DependentUpon>rpt_isletme_depolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_pasif_isletme.resx">
+      <DependentUpon>rpt_pasif_isletme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_pompali_depo.resx">
+      <DependentUpon>rpt_pompali_depo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_pompasiz_depo.resx">
+      <DependentUpon>rpt_pompasiz_depo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="db_btsDataSet.xsc">
+      <DependentUpon>db_btsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_btsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_btsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_btsDataSet.xss">
+      <DependentUpon>db_btsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconfinder_Safe_37061.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
